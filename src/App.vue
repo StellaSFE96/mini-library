@@ -25,7 +25,8 @@ export default {
         year: "1947",
         pages: 30,
         plot: "In a soothing, repetitive tone, a young rabbit says goodnight to all the things in the room. Instead of plot, Goodnight Moon looks at the world from the eyes of a very young child, calming children with the ritual of naming each object around them. Lulling babies to sleep since 1947, this classic still ranks on bestseller lists, with some estimates of all-time copies sold worldwide topping 48 million. Find out more of the best books to help your child fall asleep.",
-        audience: "1 - 4 years"
+        audience: "1 - 4 years",
+        background:"green",
       },
       {
         title: "The Very Hungry Caterpillar",
@@ -35,6 +36,7 @@ export default {
         pages: 26,
         plot: "In this classic children’s book, a caterpillar eats his way through a week’s worth of food before making his glorious transformation into a butterfly. With colorful artwork of tissue paper and paint, plus fun holes to stick tiny fingers through, this children’s classic touches on everything from counting to the days of the week to the life cycle of living things.",
         audience: "2-3 years",
+        background:"tomato",
       },
       {
         title: "A Wrinkle in Time",
@@ -43,7 +45,8 @@ export default {
         year: "1962",
         pages: 256,
         plot: "Back on current bestseller lists, likely thanks to Disney’s recent movie adaptation, this groundbreaking 1962 novel features a heroine in a genre-bending science fiction–fantasy story about a girl tasked with traveling through space and time to save her scientist father—and the world. A forerunner of modern young-adult sci-fi and fantasy, including The Hunger Games and Harry Potter, and winner of the 1963 Newbery Medal, this story continues to thrill today. Check out more books you need to read before the movie version comes out.",
-        audience: "10 - 14 years"
+        audience: "10 - 14 years",
+        background:"peru",
       },
       {
         title: "Harold and the Purple Crayon",
@@ -53,6 +56,7 @@ export default {
         pages: 64,
         plot: "Imagine if you could create a whole world just with one crayon. That’s what happens to Harold, and his story has been sparking children’s imaginations since 1955. Harold is also a great problem-solver: For example, he draws a boat to climb into after he unintentionally draws an ocean. This simple but lovely story frequently ranks on lists of the best children’s books, including those from the National Education Association and School Library Journal.",
         audience: "4 - 8 years",
+        background:"purple",
       },
       {
         title: "Where the Wild Things Are",
@@ -61,7 +65,8 @@ export default {
         year: "1963",
         pages: 48,
         plot: "Ranking at number one on lists of best children’s books compiled by Scholastic, School Library Journal, and Time magazine, 1963’s Where the Wild Things Are is all about imagination. As in Harold and the Purple Crayon (not surprisingly, that book’s author was Sendak’s mentor), young Max creates a whole world for himself after he’s punished by being sent to his room. Eventually, though, he realizes the importance of his home and family. Its exploration of complex emotions, recognition of childhood struggles, and their resolution make this seemingly simple book rich with meaning.",
-        audience: "4 - 8 years"
+        audience: "4 - 8 years",
+        background:"salmon",
 
       },
       {
@@ -72,6 +77,7 @@ export default {
         pages: 54,
         plot: "In this charming story the title heroine explores Paris with her classmates, then needs her appendix out! She’s the smallest in her class, but she’s also the bravest, and handles what could be a scary situation with fearlessness and confidence. The calming rhymes lend a sense of soothing to the tale as well. Ranking among the New York Public Library’s 100 Great Children’s Books, the original story sparked numerous sequels featuring the plucky Madeline. Read more awesome books to read with fierce female characters.",
         audience: "3 - 7 years",
+        background:"peachpuff",
       },
       {
         title: "The Tale of Peter Rabbit",
@@ -81,6 +87,7 @@ export default {
         pages: 72,
         plot: "Beatrix Potter’s classic children’s book with lovely illustrations make this little rabbit a mainstay of children’s literature over a hundred years later. In the first of many tales, mischievous Peter runs into danger when he disobeys his mother and ventures into the neighbor’s garden. A story about consequences, the playful tale is never scary and ranks at number two on Publishers Weekly‘s list of all-time bestselling children’s books. It’s amazing that it’s one of the iconic books that almost didn’t get published.",
         audience: "3 - 7 years",
+        background:"babyblue",
       },
       {
        title: "Charlotte's Web",
@@ -90,6 +97,7 @@ export default {
         pages: 192,
         plot: "Number one on the National Education Association‘s list of the best children’s books, this 1952 classic tells a tale of friendship featuring a spider named Charlotte, a pig named Wilbur, and a girl named Fern. But the cycle of life in this pastoral farm setting doesn’t just make for a sweet story—death does occur, although in a peaceful way. Caregivers should be aware of questions that may arise as children make the transition to reading literature with deeper themes, like this one. Find out the special joy of reading children’s books through grown-up eyes.",
         audience: "8-2 years",
+        background:"coral",
       }
     ]
   }}
@@ -97,8 +105,12 @@ export default {
 }
 </script>
 
-
-
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 
 </style>

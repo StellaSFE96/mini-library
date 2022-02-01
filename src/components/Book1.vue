@@ -1,6 +1,6 @@
 <template>
     <div class="book">
-        <article>
+        <article @click="viewBook" :style="book">
             <div class="line"></div>
             <h1>{{book.title}}</h1>
             <p>{{book.author}}</p>       
@@ -11,13 +11,18 @@
 <script>
 export default {
 name: 'Book1',
-props: ['book']
+props: ['book'],
+methods:{
+    viewBook(){
+        this.$emit('clicked',{...this.book})
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
-.book {
+article {
     width: 210px;
     max-height: 270px;
     background-color: rgb(72, 142, 221);
@@ -25,6 +30,7 @@ props: ['book']
     border-radius: 3px;
     position: relative;
     box-shadow: -20px 30px 70px -40px rgba(255,255,255,0.75) inset;
+    cursor: pointer;
 
      h1{
         color: white;
