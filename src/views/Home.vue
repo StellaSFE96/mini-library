@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Book1 v-for="book in books" :key="book.title" :book="book"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Book1 from '../components/Book1.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: {Book1},
+  props: ['books']
+
 }
 </script>
+
+<style scoped>
+
+.home{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+</style>
