@@ -1,11 +1,12 @@
 <template>
   <div class="home">
   <button class="list-button" @click="showList = true">Reading list</button>
+    
     <h1>Classic Children’s books</h1>
     <div class="flex">
       <Readinglist v-if="showList" :readList="readList" @list="showList = false" @delete="removeBook"/>
       <Singlebook v-if="showModal" @modal="showModal = false" :clickedBook="clickedBook" @read="addToList"/>
-      <Book1 v-for="book in books" :key="book.title" :book="book" @clicked="selectedBook"/>
+      <Book1 v-for="book in filterBooks" :key="book.title" :book="book" @clicked="selectedBook"/>
     </div>
   </div>
 </template>
@@ -18,7 +19,7 @@ import Readinglist from '../components/Readinglist.vue'
 export default {
   name: 'Home',
   components: {Book1, Singlebook, Readinglist},
-  props: ['books'],
+  props: ['filterBooks'],
   methods:{
     selectedBook(book){
       this.clickedBook = book
@@ -41,11 +42,15 @@ export default {
   }
 },
 
+
+
+
   data(){return{
     showModal: false,
     clickedBook: {},
     readList:[],
-    showList: false
+    showList: false,
+    
   }}
 }
 </script>
