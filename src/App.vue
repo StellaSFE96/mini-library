@@ -6,7 +6,6 @@
     </div>
     <input type="text" placeholder="Search books" v-model="searchBook">
     <Home :filterBooks="filterBooks"/>
-    <!-- <router-view/> -->
   </div>
 </template>
  
@@ -16,6 +15,13 @@ import Home from './views/Home.vue'
 export default {
   name: "Mini",
   components: {Home},
+
+  computed:{
+    filterBooks(){
+      if(this.searchBook.length == 0){ return this.books}
+      else{return this.books.filter(prutt => prutt.title.toLowerCase().includes(this.searchBook.toLowerCase()))}
+    }
+  },
  
   data(){return{
     searchBook: "",
@@ -1104,12 +1110,12 @@ export default {
   }
     ]
   }},
-   computed:{
-    filterBooks(){
-      if(this.searchBook.length == 0){ return this.books}
-      else{return this.books.filter(prutt => prutt.title.toLowerCase().includes(this.searchBook.toLowerCase()))}
-    }
-  },
+  //  computed:{
+  //   filterBooks(){
+  //     if(this.searchBook.length == 0){ return this.books}
+  //     else{return this.books.filter(prutt => prutt.title.toLowerCase().includes(this.searchBook.toLowerCase()))}
+  //   }
+  // },
   
 }
 </script>
